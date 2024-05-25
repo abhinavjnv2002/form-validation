@@ -66,14 +66,16 @@
   cursor: pointer;
   margin-top: 20px;
 }
-.toggle-password{
-  background-color: #28a745;
-  border: none;
+.password-hide{
+  display: flex;
+  border: 1px solid #ccc;
   border-radius: 4px;
-  color: white;
-  font-size: 1rem;
-  cursor: pointer;
-  margin-top: 2px;
+}
+.toggle-password{
+  border: none;  
+  background-color: white;
+  border-radius: 3px;
+  margin: 2px;
 }
 
 

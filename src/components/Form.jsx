@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Form.css"; // Add your CSS styles here
+import { IoMdEye } from "react-icons/io";
+import { IoMdEyeOff } from "react-icons/io";
 
 const Form = () => {
   const [formValues, setFormValues] = useState({
@@ -124,20 +126,23 @@ const Form = () => {
 
           <div className="form-group">
             <label className="form-label">Password:</label>
+            <div className="password-hide">
             <input
-              className="form-input"
+              className="form-input "
               type={showPassword ? "text" : "password"}
               name="password"
               value={formValues.password}
               onChange={handleChange}
+              style={{border:"none"}}
             />
             <button
               className="toggle-password"
               type="button"
               onClick={() => setShowPassword(!showPassword)}
             >
-              Show/Hide
+              {showPassword ? <IoMdEyeOff /> :<IoMdEye /> }
             </button>
+            </div>
             {errors.password && (
               <span className="error-text">{errors.password}</span>
             )}
